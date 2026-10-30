@@ -1,0 +1,982 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #eef8fc;
+    color: #123b55;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 92%;
+    max-width: 1200px;
+
+    height: 65px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    z-index: 10;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.12);
+}
+
+.logo {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #164c70;
+}
+
+.logo strong {
+    font-weight: 700;
+}
+
+.header nav {
+    display: flex;
+    gap: 40px;
+}
+
+.header nav a {
+    font-size: 11px;
+    font-weight: 600;
+    color: #174d70;
+
+    transition: .3s;
+}
+
+.header nav a:hover {
+    color: #56a8d4;
+}
+
+.btn-header {
+    background: #075078;
+    color: white;
+
+    padding: 11px 22px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 620px;
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,.4),
+        transparent
+    );
+}
+
+.hero > img {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+
+    width: 90%;
+    max-width: 1100px;
+
+    padding-top: 100px;
+}
+
+.hero-content p {
+    font-size: 14px;
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: clamp(40px, 6vw, 75px);
+
+    line-height: 1;
+
+    max-width: 700px;
+
+    font-weight: 600;
+}
+
+.hero-content h1 span {
+    display: block;
+    font-weight: 800;
+}
+
+.btn {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    background: #075078;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 25px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-area {
+    position: relative;
+
+    margin-top: -35px;
+
+    z-index: 5;
+
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    width: 90%;
+    max-width: 1100px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 150px;
+
+    gap: 10px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+.search-item {
+    padding: 10px 20px;
+
+    border-right: 1px solid #d4e4eb;
+}
+
+.search-item small {
+    color: #4d8aaa;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.search-item p {
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color: #78909c;
+}
+
+.search-button {
+    background: #075078;
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.beneficios {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 65px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+}
+
+.beneficio {
+    flex: 1;
+}
+
+.icone {
+    font-size: 30px;
+    color: #62acd2;
+
+    margin-bottom: 10px;
+}
+
+.beneficio h3 {
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.beneficio p {
+    font-size: 10px;
+    color: #718896;
+}
+
+.linha {
+    width: 1px;
+    height: 70px;
+    background: #17577b;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-title span,
+.sobre-texto span,
+.contato-header span {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #4d91b7;
+}
+
+.section-title h2 {
+    margin-top: 8px;
+
+    font-size: 30px;
+
+    color: #123f59;
+}
+
+.section-title p {
+    font-size: 12px;
+
+    margin-top: 8px;
+
+    color: #78909c;
+}
+
+
+/* =========================
+   DESTINOS
+========================= */
+
+.destinos {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 60px 25px;
+}
+
+.destinos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.destino-card {
+    height: 260px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.destino-card img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.destino-card:hover img {
+    transform: scale(1.08);
+}
+
+.destino-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 45%,
+        rgba(0,0,0,.7)
+    );
+}
+
+.destino-info {
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+
+    color: white;
+
+    z-index: 2;
+}
+
+.destino-info h3 {
+    font-size: 19px;
+}
+
+.destino-info p {
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+.card-icon {
+    position: absolute;
+
+    right: 15px;
+    top: 15px;
+
+    width: 30px;
+    height: 30px;
+
+    background: #075078;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 3;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+    height: 430px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 30px;
+}
+
+.banner > img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.banner::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.3);
+}
+
+.banner-content {
+    position: absolute;
+
+    z-index: 2;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    color: white;
+}
+
+.banner-content p {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+.banner-content h2 {
+    font-size: 50px;
+
+    margin: 10px 0;
+}
+
+.banner-content h2 span {
+    display: block;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produtos {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 80px 25px;
+}
+
+.produtos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.produto-card {
+    background: #f8ead7;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: .3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-7px);
+}
+
+.produto-card > img {
+    height: 190px;
+
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 18px;
+}
+
+.produto-info h3 {
+    font-size: 14px;
+}
+
+.produto-info p {
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    margin: 8px 0 15px;
+
+    color: #657982;
+}
+
+.produto-info button {
+    background: white;
+
+    padding: 8px 15px;
+
+    border-radius: 15px;
+
+    font-size: 9px;
+
+    color: #174d70;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    background: white;
+
+    padding: 90px max(25px, calc((100% - 1100px) / 2));
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.sobre-texto h2 {
+    font-size: 42px;
+
+    margin: 10px 0 20px;
+}
+
+.sobre-texto p {
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #687d87;
+
+    margin-bottom: 15px;
+
+    max-width: 500px;
+}
+
+.sobre-imagens {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+.sobre-imagens img {
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.sobre-imagens img:nth-child(2) {
+    margin-top: 60px;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    padding: 90px 25px;
+}
+
+.contato-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.contato-header h2 {
+    font-size: 35px;
+
+    margin-top: 10px;
+}
+
+.contato-header h2 strong {
+    display: block;
+}
+
+.contato-header p {
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    color: #718896;
+}
+
+.contato-container {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 60px;
+}
+
+.contato-info h3 {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.contato-info > p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #718896;
+
+    margin-bottom: 25px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item strong {
+    font-size: 11px;
+}
+
+.info-item p {
+    font-size: 11px;
+
+    color: #718896;
+
+    margin-top: 4px;
+}
+
+
+/* FORM */
+
+.formulario {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+
+    border: 1px solid #b8cbd4;
+
+    border-radius: 10px;
+
+    padding: 14px;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #397fa5;
+}
+
+.formulario textarea {
+    height: 130px;
+
+    resize: none;
+}
+
+.formulario button {
+    background: #075078;
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 14px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: white;
+
+    padding: 30px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.footer-logo {
+    font-size: 17px;
+
+    color: #164c70;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+.footer-links a {
+    font-size: 9px;
+
+    font-weight: 600;
+
+    color: #174d70;
+}
+
+.social {
+    display: flex;
+
+    gap: 8px;
+}
+
+.social a {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: #075078;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+}
+
+.copyright {
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    color: #9aaab0;
+
+    padding-top: 10px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .header nav {
+        gap: 15px;
+    }
+
+    .header nav a {
+        font-size: 9px;
+    }
+
+    .destinos-grid,
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+        height: auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .header nav {
+        gap: 12px;
+    }
+
+    .header nav a {
+        font-size: 8px;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    .hero {
+        height: 550px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+
+        padding: 10px;
+    }
+
+    .search-item {
+        border-right: none;
+
+        border-bottom: 1px solid #ddd;
+    }
+
+    .search-button {
+        height: 45px;
+    }
+
+    .beneficios {
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .linha {
+        width: 80px;
+
+        height: 1px;
+    }
+
+    .destinos-grid,
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-content h2 {
+        font-size: 35px;
+    }
+    .sobre {
+        padding: 60px 25px;
+    }
+    .sobre-imagens {
+        grid-template-columns: 1fr 1fr;
+    }
+    .sobre-imagens img {
+        height: 200px;
+    }
+    .contato-header h2 {
+        font-size: 28px;
+    }
+    footer {
+        flex-direction: column;
+    }
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
